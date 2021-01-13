@@ -56,9 +56,9 @@ TPU型号：TPU v2-8 64G
 
 语言模型定义：bert4keras
 
-训练数据：Google Storage
+训练数据：Google Storage中之前上传的corpus.xxx.tfrecord
 
-参数保存：Google Drive
+参数保存：Google Drive中某个指定的文件夹
 
 1. 上传训练代码[colab_pretrain.ipynb](colab_pretrain.ipynb)，并根据注释修改
 
@@ -87,8 +87,11 @@ setInterval(ConnectButton,60000);
 
 ### 需要注意的点：
 
+1. 需要google edu的无限网盘，不然bert的参数可以直接耗光你的15G存储空间（可能以后会出存放在google storage的版本）
 
+2. 当前的谷歌TPU的TF版本为2.4，不保证以后能一直用
 
+3. Colab的控制台输出可能会出现超出buffer size的问题，但不影响训练，只是进度条不更新，可以去保存的路径下查看保存的参数文件
 
 ------
 
